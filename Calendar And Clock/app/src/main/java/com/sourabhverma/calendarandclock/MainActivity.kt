@@ -23,7 +23,9 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity, "Opening Calendar", Toast.LENGTH_SHORT).show()
             val openCalendar : Intent  = Intent(this, CalendarActivity::class.java)
             openCalendar.putExtra("FromMainActivity", "Konnexions")
+            openCalendar.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(openCalendar)
+            finish()
         }
 
         button2.setOnClickListener {
