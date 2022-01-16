@@ -10,7 +10,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView : RecyclerView
 
     private var adapter : Adapter = Adapter()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -18,7 +17,6 @@ class MainActivity : AppCompatActivity() {
         //Initialize
         recyclerView = findViewById(R.id.recyclerView)
         val layoutManager = LinearLayoutManager(applicationContext)
-
 
         adapter.setArr(getDataFromApi())
 
